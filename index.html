@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="fade" class="hide"> 
+        </div>
+        
+        <div class="menu-lateral">
+            <input type="text" name="pesquisa" id="input-pesquisar" placeholder="Pesquisar despesa">
+            <ul>
+                <li>Painel</li>
+                <li>Produtos</li>
+            </ul>
+        </div>
+
+        <!--AQUI FICAM AS DIVS QUE VÃO PEGAR OS VALORES INSERIDOS-->
+        <div class="resume">
+            <div style="background-color: white; border-radius: 2px; ">
+                <strong>Entradas: R$</strong>
+                <span class="incomes">0.0</span>
+            </div>
+            <div style="background-color: white; border-radius: 2px;">
+                <strong>Saídas: R$ </strong>
+                <span class="expenses">0.0</span>
+            </div>
+            <div style="background-color: white; border-radius: 2px;">
+                <strong >Total: R$ </strong>
+                <span class="total">0.00</span>
+            </div>
+            <div class="botao-div">
+                <button id="nova-despesa-button">Nova despesa</button>
+               </div>
+        </div>
+
+        <!--AQUI FICAM OS COMANDOS DE ENTRADA-->
+        <div id="newItem" class="hide">
+            <div class="divDesc">
+                <label for="">Descrição</label>
+                <input type="text" id="desc">
+            </div>
+
+            <div class="divAmount">
+                <label for="amount">Valor</label>
+                <input type="number" id="amount">
+            </div>
+
+            <div class="divData">
+                <label for="">Data</label><br>
+                <input type="date" id="data">
+            </div>
+
+            <div class="divType">
+                <label for="type">Tipo</label>
+                <select id="type">
+                    <option>Entrada</option>
+                    <option>Saída</option>
+                </select>
+            </div>
+                <button id="btnNew">Incluir</button>
+                <button id="btnFechar">Fechar</button>
+            </div>
+
+        
+
+
+            <div class="divTabele">
+                <!--AQUI É O TITULO DA TABELA-->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th class="columnAmount">Valor</th>
+                            <th class="columnType">Tipo</th>
+                            <th class="columnDate">Data</th>
+                            <th class="columnAction">Excluir</th>
+                        </tr>
+                    </thead>
+
+                    <!--AQUI VAI MOSTRAR OS VALORES INSERIDOS-->
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
