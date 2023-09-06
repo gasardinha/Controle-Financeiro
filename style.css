@@ -273,5 +273,9 @@ table {
     .resume div {
       width: 100%;
     }
+
+    #newItem {
+      width: 70%;
+    }
   }
   
